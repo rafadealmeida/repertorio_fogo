@@ -1,17 +1,27 @@
+import Image from 'next/image';
 import logo from '../../public/images/fogo_divino-white.png';
 export default function Login() {
   return (
-    <main className="w-full h-screen flex flex-col items-center justify-center bg-zinc-200 sm:px-4">
-      <div className="w-full space-y-6 text-gray-600 sm:max-w-xl bg-zinc-50 rounded-md py-8 drop-shadow-2xl">
-        <div className="text-center">
-          <img
+    <main className="w-full h-screen flex flex-col items-center justify-center bg-zinc-200 ">
+      <div className="w-full space-y-6 max-w-96 lg:max-w-xl  text-gray-600  bg-zinc-50 rounded-md py-8 drop-shadow-2xl ">
+        <div className="text-center ">
+          <Image
+            src="/images/fogo_divino-white.png"
+            width={150}
+            height={150}
+            className="mx-auto drop-shadow-[0_10px_20px_rgba(255,_87,_126,_0.7)]"
+            alt={'Logo com uma nota musical em chamas'}
+          />
+          {/* <img
             src="/images/fogo_divino-white.png"
             width={150}
             className="mx-auto"
-          />
-          {/* <div className="mt-5 space-y-2">
-                    <h3 className="text-gray-800 text-4xl font-bold sm:text-4xl">Repertório Fogo Divino</h3>
-                </div> */}
+          /> */}
+          <div className="mt-5 space-y-2">
+            <h3 className="text-gray-800 text-4xl font-bold sm:text-4xl">
+              Repertório Fogo Divino
+            </h3>
+          </div>
           <div className="mt-5 space-y-2">
             <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
               Seja bem vindo!
@@ -31,19 +41,22 @@ export default function Login() {
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
-            <button className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150 drop-shadow-lg">
+            <button
+              className="w-full px-4 py-2 text-white font-medium bg-indigo-600
+             hover:bg-indigo-500 active:bg-indigo-600 shadow-lg shadow-indigo-500/30 hover:shadow-indigo-600/50  rounded-lg duration-150 drop-shadow-lg"
+            >
               Login
             </button>
           </form>
           <div className="mt-5">
-            <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100 ">
+            <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 hover:shadow-gray-400/80 active:bg-gray-100 shadow-lg">
               <svg
                 className="w-5 h-5"
                 viewBox="0 0 48 48"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_17_40)">
+                <g clipPath="url(#clip0_17_40)">
                   <path
                     d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z"
                     fill="#4285F4"

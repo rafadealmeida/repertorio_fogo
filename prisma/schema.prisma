@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Repertorio {
+  id      String   @id @default(uuid())
+
+  nome    String   @default("Repertório")
+  igreja  String
+  mes     String   @map("Mês")
+  ano     DateTime @default(now())
+  musicas String
+
+  create_at DateTime @default(now())
+  update_at DateTime @updatedAt
+
+  @@map("repertorios")
+}
+
+model User {
+  id   String @id @default(uuid())
+
+  nome String
+  email String
+  role String
+  photoUrl String?
+
+  create_at DateTime @default(now())
+  update_at DateTime @updatedAt
+
+  @@map("usuarios")
+
+}

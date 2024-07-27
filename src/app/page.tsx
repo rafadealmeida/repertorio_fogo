@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import logo from '../../public/images/fogo_divino-white.png';
 export default function Login() {
   return (
     <main className="w-full h-screen flex flex-col items-center justify-center bg-zinc-200 ">
@@ -12,11 +11,6 @@ export default function Login() {
             className="mx-auto drop-shadow-[0_10px_20px_rgba(255,_87,_126,_0.7)]"
             alt={'Logo com uma nota musical em chamas'}
           />
-          {/* <img
-            src="/images/fogo_divino-white.png"
-            width={150}
-            className="mx-auto"
-          /> */}
           <div className="mt-5 space-y-2">
             <h3 className="text-gray-800 text-4xl font-bold sm:text-4xl">
               Repertório Fogo Divino
